@@ -22,7 +22,10 @@ public class Retrive_post extends AppCompatActivity {
     EditText editTextPhone;
     Spinner spinnerGenre;
     Button button;
-    private DatabaseReference databaseArtists = FirebaseDatabase.getInstance().getReference();
+    // private DatabaseReference databaseArtists = FirebaseDatabase.getInstance().getReference();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseArtists = database.getReference("sadia");
+
     ListView listViewDonor;
 
     List<posts> bloodList;
@@ -73,5 +76,8 @@ public class Retrive_post extends AppCompatActivity {
     }
 
 }
+
+
+
 
 
